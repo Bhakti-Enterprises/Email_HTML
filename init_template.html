@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="color-scheme" content="light">
+  <meta name="supported-color-schemes" content="light">
+  <title>Bhakti Enterprises - Copier & Spare Parts</title>
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease-out;
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+    @keyframes shimmer {
+      0% {
+        background-position: -200% center;
+      }
+      100% {
+        background-position: 200% center;
+      }
+    }
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(0, 191, 255, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 0 8px rgba(0, 191, 255, 0);
+      }
+    }
+    .button-hover {
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(90deg, #00bfff 0%, #00d4ff 50%, #00bfff 100%);
+      background-size: 200% auto;
+      animation: shimmer 3s linear infinite, pulse 2s ease-in-out infinite;
+    }
+    .button-hover:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 191, 255, 0.5);
+      animation: shimmer 2s linear infinite, pulse 1.5s ease-in-out infinite;
+    }
+    html{
+      background-color: #ffffff !important;
+    }
+
+    body{
+      background-color: #ffffff !important;
+    }
+    .logo-bg-white {
+      background-color: #ffffff !important;
+    }
+    .product-hover {
+      transition: all 0.3s ease;
+    }
+    .product-hover:hover {
+      transform: translateX(5px);
+    }
+    .arrow-hover {
+      transition: transform 0.3s ease;
+    }
+    .product-hover:hover .arrow-hover {
+      transform: translateX(5px);
+    }
+    @media only screen and (max-width: 600px) {
+      .email-container {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .email-wrapper {
+        width: 100% !important;
+        padding: 10px !important;
+      }
+      .mobile-padding {
+        padding: 16px !important;
+      }
+      .mobile-hero-padding {
+        padding: 30px 20px !important;
+        min-height: 200px !important;
+        height: auto !important;
+      }
+      .mobile-hero-title {
+        font-size: 22px !important;
+        line-height: 1.2 !important;
+      }
+      .mobile-hero-text {
+        font-size: 13px !important;
+      }
+      .mobile-section-title {
+        font-size: 16px !important;
+      }
+      .mobile-product {
+        width: 100% !important;
+        display: block !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 16px !important;
+      }
+      .mobile-product-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+      }
+      .mobile-footer-padding {
+        padding: 24px 16px !important;
+      }
+      .mobile-text {
+        font-size: 11px !important;
+      }
+      .mobile-button {
+        padding: 10px 24px !important;
+        font-size: 13px !important;
+      }
+      .mobile-hide {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f4f4f4 !important; font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased;">
+  
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f4f4f4 !important;">
+    <tr>
+      <td align="center" style="padding: 20px 0;" class="email-wrapper">
+        
+        <table role="presentation" cellpadding="0" cellspacing="0" width="600" class="email-container" style="background-color: #ffffff !important; border-collapse: collapse; max-width: 100%; width: 100%;">
+          
+          <tr>
+            <td style="background-color: #ffffff !important; padding: 16px 24px;" class="mobile-padding logo-bg-white">
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff !important;">
+                <tr>
+                  <td align="center" style="background-color: #ffffff !important;">
+                    <a href="https://bhaktienterprises.co.in" style="text-decoration: none; display: inline-block;">
+                      <img src="https://bhaktienterprises.co.in/images/demos/demo9/logo.png" alt="Bhakti Enterprises" style="height: 40px; width: auto; max-width: 100%; display: block; background-color: #ffffff !important;" class="fade-in">
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          
+          <tr>
+            <td style="position: relative;">
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="position: relative; min-height: 200px; height: auto; overflow: hidden; background-color: #1a365d;">
+                <tr>
+                  <td style="position: relative; padding: 0;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-image: url('https://bananacircle.xyz/assets/hero-copiers-animated%20(1)%20(1).gif'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 200px; height: auto;">
+                      <tr>
+                        <td style="background-color: rgba(26, 54, 93, 0.80); padding: 40px 30px; vertical-align: middle; min-height: 200px;" class="mobile-hero-padding">
+                          <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td style="color: #ffffff; font-size: 28px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; line-height: 1.3; text-align: center;" class="fade-in-up mobile-hero-title">
+                                Your Trusted Partner for<br>Copier Solutions & Spare Parts
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="color: #e2e8f0; font-size: 14px; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; text-align: center; padding-top: 16px;" class="fade-in-up mobile-hero-text">
+                                Premium quality OEM & compatible parts for Canon, Ricoh, HP, Kyocera & more
+                              </td>
+                            </tr>
+                            <tr>
+                              <td align="center" style="padding-top: 24px;">
+                                <table role="presentation" cellpadding="0" cellspacing="0">
+                                  <tr>
+                                    <td style="padding: 12px 32px; border-radius: 4px;" class="button-hover mobile-button">
+                                      <a href="https://wa.me/{{WHATSAPP_NUMBER}}?text=Hello%2C%20I%20am%20interested%20in%20your%20copier%20solutions%20and%20spare%20parts" style="color: #ffffff; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; text-decoration: none; display: inline-block;">
+                                        Explore more
+                                      </a>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          
+          <tr>
+            <td style="padding: 24px 24px 16px 24px;" class="mobile-padding">
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td style="color: #00bfff; font-size: 18px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; border-bottom: 2px solid #00bfff; padding-bottom: 8px;" class="mobile-section-title section-title">
+                    Featured Products
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          
+          <tr>
+            <td style="padding: 0 24px;" class="mobile-padding">
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td width="50%" style="padding-right: 8px; padding-bottom: 16px; vertical-align: top;" class="mobile-product">
+                    <a href="https://wa.me/{{WHATSAPP_NUMBER}}" style="text-decoration: none; display: block;" class="product-hover">
+                      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #e2e8f0; border-radius: 4px; background-color: #ffffff !important;" class="product-card">
+                        <tr>
+                          <td align="center" style="padding: 12px;">
+                            <img src="https://bhaktienterprises.co.in/adminpanel/uploads/products/BE00000005.jpg" alt="Premium Toner Cartridge" width="120" height="120" style="display: block; border-radius: 4px; object-fit: cover; background-color: #f1f5f9; margin: 0 auto; max-width: 100%; height: auto;" class="mobile-product-image" onerror="this.src='https://via.placeholder.com/120x120/1a365d/ffffff?text=Toner'">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 0 12px 12px 12px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td style="color: #00bfff; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding-bottom: 4px; text-align: center;" class="product-text">
+                                  Premium Toner Cartridge
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="color: #64748b; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4; text-align: center; padding-bottom: 10px;" class="product-description">
+                                  High-yield compatible toner
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" style="padding-bottom: 12px;">
+                                  <table role="presentation" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td style="background-color: #00bfff; padding: 8px 20px; border-radius: 4px;">
+                                        <a href="https://wa.me/{{WHATSAPP_NUMBER}}" style="color: #ffffff; font-size: 12px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; text-decoration: none; display: inline-block;">
+                                          View Detail
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </a>
+                  </td>
+                  <td width="50%" style="padding-left: 8px; padding-bottom: 16px; vertical-align: top;" class="mobile-product">
+                    <a href="https://wa.me/{{WHATSAPP_NUMBER}}?text=Hello%2C%20I%20am%20interested%20in%20OPC%20Drum%20Unit" style="text-decoration: none; display: block;" class="product-hover">
+                      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #e2e8f0; border-radius: 4px; background-color: #ffffff !important;" class="product-card">
+                        <tr>
+                          <td align="center" style="padding: 12px;">
+                            <img src="https://bhaktienterprises.co.in/adminpanel/uploads/category/1745928136_opc-drum.jpg" alt="OPC Drum Unit" width="120" height="120" style="display: block; border-radius: 4px; object-fit: cover; background-color: #f1f5f9; margin: 0 auto; max-width: 100%; height: auto;" class="mobile-product-image">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 0 12px 12px 12px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td style="color: #00bfff; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding-bottom: 4px; text-align: center;" class="product-text">
+                                  OPC Drum Unit
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="color: #64748b; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4; text-align: center; padding-bottom: 10px;" class="product-description">
+                                  Long-lasting imaging drum
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" style="padding-bottom: 12px;">
+                                  <table role="presentation" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td style="background-color: #00bfff; padding: 8px 20px; border-radius: 4px;">
+                                        <a href="https://wa.me/{{WHATSAPP_NUMBER}}" style="color: #ffffff; font-size: 12px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; text-decoration: none; display: inline-block;">
+                                          View Detail
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          
+          <tr>
+            <td style="padding: 0 24px;" class="mobile-padding">
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td width="50%" style="padding-right: 8px; padding-bottom: 16px; vertical-align: top;" class="mobile-product">
+                    <a href="https://wa.me/{{WHATSAPP_NUMBER}}" style="text-decoration: none; display: block;" class="product-hover">
+                      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #e2e8f0; border-radius: 4px; background-color: #ffffff !important;" class="product-card">
+                        <tr>
+                          <td align="center" style="padding: 12px;">
+                            <img src="https://bhaktienterprises.co.in/adminpanel/uploads/category/1745928162_developing-unit.jpg" alt="Developing Unit" width="120" height="120" style="display: block; border-radius: 4px; object-fit: cover; background-color: #f1f5f9; margin: 0 auto; max-width: 100%; height: auto;" class="mobile-product-image">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 0 12px 12px 12px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td style="color: #00bfff; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding-bottom: 4px; text-align: center;" class="product-text">
+                                  Developing Unit
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="color: #64748b; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4; text-align: center; padding-bottom: 10px;" class="product-description">
+                                  For multifunction copiers
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" style="padding-bottom: 12px;">
+                                  <table role="presentation" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td style="background-color: #00bfff; padding: 8px 20px; border-radius: 4px;">
+                                        <a href="https://wa.me/{{WHATSAPP_NUMBER}}" style="color: #ffffff; font-size: 12px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; text-decoration: none; display: inline-block;">
+                                          View Detail
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </a>
+                  </td>
+                  <td width="50%" style="padding-left: 8px; padding-bottom: 16px; vertical-align: top;" class="mobile-product">
+                    <a href="https://wa.me/{{WHATSAPP_NUMBER}}?text=Hello%2C%20I%20am%20interested%20in%20Pickup%20Roller%20Kit" style="text-decoration: none; display: block;" class="product-hover">
+                      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #e2e8f0; border-radius: 4px; background-color: #ffffff !important;" class="product-card">
+                        <tr>
+                          <td align="center" style="padding: 12px;">
+                            <img src="https://bhaktienterprises.co.in/adminpanel/uploads/products/BE00005221.jpg" alt="Pickup Roller Kit" width="120" height="120" style="display: block; border-radius: 4px; object-fit: cover; background-color: #f1f5f9; margin: 0 auto; max-width: 100%; height: auto;" class="mobile-product-image">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 0 12px 12px 12px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td style="color: #00bfff; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding-bottom: 4px; text-align: center;" class="product-text">
+                                  Pickup Roller Kit
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="color: #64748b; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4; text-align: center; padding-bottom: 10px;" class="product-description">
+                                  Paper feed rollers
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" style="padding-bottom: 12px;">
+                                  <table role="presentation" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td style="background-color: #00bfff; padding: 8px 20px; border-radius: 4px;">
+                                        <a href="https://wa.me/{{WHATSAPP_NUMBER}}" style="color: #ffffff; font-size: 12px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; text-decoration: none; display: inline-block;">
+                                          View Detail
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          
+          <tr>
+            <td style="padding: 0 24px 24px 24px;" class="mobile-padding">
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td width="50%" style="padding-right: 8px; padding-bottom: 16px; vertical-align: top;" class="mobile-product">
+                    <a href="https://wa.me/{{WHATSAPP_NUMBER}}?text=Hello%2C%20I%20am%20interested%20in%20Multifunction%20Copier" style="text-decoration: none; display: block;" class="product-hover">
+                      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #e2e8f0; border-radius: 4px; background-color: #ffffff !important;" class="product-card">
+                        <tr>
+                          <td align="center" style="padding: 12px;">
+                            <img src="https://bananacircle.xyz/assets/CZ186A-3_T1680355450%20(1).webp" alt="Multifunction Copier" width="120" height="120" style="display: block; border-radius: 4px; object-fit: contain; background-color: #f1f5f9; margin: 0 auto; max-width: 100%; height: auto;" class="mobile-product-image">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 0 12px 12px 12px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td style="color: #00bfff; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding-bottom: 4px; text-align: center;" class="product-text">
+                                  Multifunction Copier
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="color: #64748b; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4; text-align: center; padding-bottom: 10px;" class="product-description">
+                                  Commercial-grade solutions
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" style="padding-bottom: 12px;">
+                                  <table role="presentation" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td style="background-color: #00bfff; padding: 8px 20px; border-radius: 4px;">
+                                        <a href="https://wa.me/{{WHATSAPP_NUMBER}}" style="color: #ffffff; font-size: 12px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; text-decoration: none; display: inline-block;">
+                                          View Detail
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </a>
+                  </td>
+                  <td width="50%" style="padding-left: 0px; padding-bottom: 0px; vertical-align: top;" class="mobile-product">
+                    <a href="https://wa.me/{{WHATSAPP_NUMBER}}?text=Hello%2C%20I%20would%20like%20to%20explore%20your%20full%20catalog" style="text-decoration: none; display: block;" class="product-hover">
+                      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border: 2px dashed #00bfff; border-radius: 4px; background-color: #ffffff !important;" class="product-card see-more-card">
+                        <tr>
+                          <td align="center" style="padding-top:8px;">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%23f1f5f9' rx='4'/%3E%3Ctext x='50%25' y='50%25' font-size='32' font-weight='bold' fill='%2300bfff' text-anchor='middle' dominant-baseline='middle' font-family='Arial, Helvetica, sans-serif'%3E+%3C/text%3E%3C/svg%3E" alt="See More" width="120" height="120" style="display: block; border-radius: 4px; background-color: #f1f5f9; margin: 0 auto; max-width: 100%; height: auto;" class="mobile-product-image">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 0 12px 12px 12px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td style="color: #00bfff; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding-bottom: 4px; text-align: center;" class="product-text">
+                                  See More
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="color: #64748b; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4; text-align: center; padding-bottom: 10px;" class="product-description">
+                                  Explore our full catalog
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" style="padding-bottom: 8px;">
+                                  <table role="presentation" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td style="background-color: #00bfff; padding: 8px 20px; border-radius: 4px;">
+                                        <a href="https://wa.me/{{WHATSAPP_NUMBER}}?text=Hello%2C%20I%20would%20like%20to%20view%20your%20full%20catalog" style="color: #ffffff; font-size: 12px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; text-decoration: none; display: inline-block;">
+                                          View Catalog
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          
+        </table>
+        
+        <table role="presentation" cellpadding="0" cellspacing="0" width="600" class="email-container" style="margin: 20px auto 0 auto; max-width: 100%; width: 100%; background-color: #ffffff !important;">
+          <tr>
+            <td align="center" style="padding: 16px 24px; background-color: #ffffff !important;" class="mobile-padding">
+              <table role="presentation" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="color: #94a3b8; font-size: 11px; font-family: Arial, Helvetica, sans-serif; text-align: center; line-height: 1.5;" class="mobile-text footer-text">
+                    You are receiving this email because you subscribed to our newsletter.<br>
+                    <a href="#" style="color: #00bfff; text-decoration: underline;" class="link-text">Unsubscribe</a> | 
+                    <a href="#" style="color: #00bfff; text-decoration: underline;" class="link-text">Update Preferences</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        
+        <table role="presentation" cellpadding="0" cellspacing="0" width="600" class="email-container" style="margin: 0 auto; background-color: #1a365d; max-width: 100%; width: 100%;">
+          <tr>
+            <td style="padding: 32px 24px;" class="mobile-footer-padding">
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td align="center" style="padding-bottom: 20px;">
+                    <a href="https://bhaktienterprises.co.in" style="text-decoration: none; display: inline-block;">
+                      <img src="https://bhaktienterprises.co.in/images/demos/demo9/logo-footer.png" alt="Bhakti Enterprises" style="height: 35px; width: auto; max-width: 100%; display: block; margin: 0 auto;">
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding-bottom: 16px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="color: #e2e8f0; font-size: 13px; font-family: Arial, Helvetica, sans-serif; line-height: 1.6; text-align: center;" class="mobile-text">
+                         
+                          Your Trusted Partner for Copier Solutions & Spare Parts
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding-bottom: 20px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="color: #cbd5e1; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1.8; text-align: center;" class="mobile-text">
+                          <a href="tel:+919820229230" style="color: #cbd5e1; text-decoration: none;"> +91 98202 29230</a><br>
+                          <a href="mailto:info@bhaktienterprises.co.in" style="color: #cbd5e1; text-decoration: none;">info@bhaktienterprises.co.in</a><br>
+                          <a href="https://bhaktienterprises.co.in" style="color: #cbd5e1; text-decoration: none;">www.bhaktienterprises.co.in</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+          
+                <tr>
+                  <td align="center">
+                    <table role="presentation" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="color: #94a3b8; font-size: 11px; font-family: Arial, Helvetica, sans-serif; text-align: center; line-height: 1.5; border-top: 1px solid rgba(226, 232, 240, 0.2); padding-top: 16px;" class="mobile-text footer-text">
+                          © 2026 Bhakti Enterprises. All rights reserved.<br>
+                          Premium quality OEM & compatible parts for Canon, Ricoh, HP, Kyocera & more
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        
+      </td>
+    </tr>
+  </table>
+  
+</body>
+</html>
