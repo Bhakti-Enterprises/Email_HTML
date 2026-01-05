@@ -1,5 +1,4 @@
 import csv
-import os
 from pathlib import Path
 
 with open('./init_template.html', 'r', encoding='utf-8') as f:
