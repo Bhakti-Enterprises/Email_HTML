@@ -20,12 +20,12 @@ SENDER_PASSWORD = os.getenv("SENDER_PASSWORD")
 SENDER_NAME = os.getenv("SENDER_NAME", "Bhakti Enterprises")
 
 
-EMAIL_SUBJECT = "Your Trusted Partner for Copier Solutions & Spare Parts"
+EMAIL_SUBJECT = "Standard Email Template for Bhakti Enterprises"
 
 # Instruction text to prepend to email
 INSTRUCTION_TEXT = """
 <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin-bottom: 20px; font-family: Arial, sans-serif;">
-    <h3 style="color: #1a365d; margin-top: 0; margin-bottom: 12px;">📎 How to View This Email Template Properly</h3>
+    <h3 style="color: #1a365d; margin-top: 0; margin-bottom: 12px;">How to View This Email Template Properly</h3>
     <p style="color: #475569; font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
         I've attached an HTML file to this email. To view it beautifully in Gmail or Outlook, follow these steps:
     </p>
@@ -74,7 +74,7 @@ INSTRUCTION_TEXT = """
 <hr style="border: none; border-top: 2px dashed #e2e8f0; margin: 20px 0;">
 """
 
-contacts_file = 'contactsmock.csv'
+contacts_file = 'contacts.csv'
 generated_emails_dir = Path('generated_emails')
 
 def load_html_file(filename):
