@@ -22,6 +22,57 @@ SENDER_NAME = os.getenv("SENDER_NAME", "Bhakti Enterprises")
 
 EMAIL_SUBJECT = "Your Trusted Partner for Copier Solutions & Spare Parts"
 
+# Instruction text to prepend to email
+INSTRUCTION_TEXT = """
+<div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin-bottom: 20px; font-family: Arial, sans-serif;">
+    <h3 style="color: #1a365d; margin-top: 0; margin-bottom: 12px;">📎 How to View This Email Template Properly</h3>
+    <p style="color: #475569; font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
+        I've attached an HTML file to this email. To view it beautifully in Gmail or Outlook, follow these steps:
+    </p>
+    
+    <div style="background-color: #ffffff; border-radius: 6px; padding: 16px; margin-bottom: 16px;">
+        <p style="color: #1e293b; font-size: 14px; font-weight: bold; margin: 0 0 8px 0;">Step 1: Install the HTMaiL Extension</p>
+        <p style="color: #64748b; font-size: 13px; margin: 0 0 8px 0;">Download and install the free HTMaiL extension for your browser:</p>
+        <ul style="margin: 0; padding-left: 20px;">
+            <li style="color: #0284c7; font-size: 13px; margin-bottom: 4px;">
+                <a href="https://chromewebstore.google.com/detail/htmail-insert-html-into-g/omojcahabhafmagldeheegggbakefhlh" style="color: #0284c7;">Chrome / Edge / Brave (Chrome Web Store)</a>
+            </li>
+            <li style="color: #0284c7; font-size: 13px;">
+                <a href="https://addons.mozilla.org/en-US/firefox/addon/htmail/" style="color: #0284c7;">Firefox (Mozilla Add-ons)</a>
+            </li>
+        </ul>
+    </div>
+    
+    <div style="background-color: #ffffff; border-radius: 6px; padding: 16px; margin-bottom: 16px;">
+        <p style="color: #1e293b; font-size: 14px; font-weight: bold; margin: 0 0 8px 0;">Step 2: Compose a New Email</p>
+        <p style="color: #64748b; font-size: 13px; margin: 0;">Open Gmail and click "Compose" to start a new email.</p>
+    </div>
+    
+    <div style="background-color: #ffffff; border-radius: 6px; padding: 16px; margin-bottom: 16px;">
+        <p style="color: #1e293b; font-size: 14px; font-weight: bold; margin: 0 0 8px 0;">Step 3: Click the HTML Icon</p>
+        <p style="color: #64748b; font-size: 13px; margin: 0 0 12px 0;">
+            After installing the extension, you'll see new icons in the compose toolbar. 
+            Click on the <strong>&lt;/&gt;</strong> (code) icon as shown below:
+        </p>
+        <div style="text-align: center;">
+            <img src="https://bhakti-enterprises.github.io/Email_HTML/assets/extension-icon.jpg" alt="HTMaiL Extension Icons in Gmail" style="max-width: 100%; height: auto; border: 1px solid #e2e8f0; border-radius: 4px;">
+        </div>
+    </div>
+    
+    <div style="background-color: #ffffff; border-radius: 6px; padding: 16px;">
+        <p style="color: #1e293b; font-size: 14px; font-weight: bold; margin: 0 0 8px 0;">Step 4: Upload the Attached HTML File</p>
+        <p style="color: #64748b; font-size: 13px; margin: 0;">
+            Download the HTML file attached to this email and upload it using the HTMaiL extension. 
+            Your beautiful email template will be inserted automatically!
+        </p>
+    </div>
+    
+    <p style="color: #94a3b8; font-size: 12px; margin-top: 16px; margin-bottom: 0; text-align: center;">
+        Below is a preview of how the email will look:
+    </p>
+</div>
+<hr style="border: none; border-top: 2px dashed #e2e8f0; margin: 20px 0;">
+"""
 
 contacts_file = 'contactsmock.csv'
 generated_emails_dir = Path('generated_emails')
@@ -45,9 +96,22 @@ def send_email(to_email, to_name, html_content, html_filename):
         msg['To'] = to_email
         msg['Subject'] = EMAIL_SUBJECT
         
+        # Combine instruction text with preview of the HTML content
+        full_html = f"""<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin: 0; padding: 20px; background-color: #f4f4f4; font-family: Arial, sans-serif;">
+    {INSTRUCTION_TEXT}
+    {html_content}
+</body>
+</html>"""
+        
         # Create alternative part for HTML body
         html_body = MIMEMultipart('alternative')
-        html_part = MIMEText(html_content, 'html', 'utf-8')
+        html_part = MIMEText(full_html, 'html', 'utf-8')
         html_body.attach(html_part)
         msg.attach(html_body)
         
@@ -104,16 +168,16 @@ def main():
     # Check if configuration is set
     if not SENDER_EMAIL or not SENDER_PASSWORD:
         print("[ERROR] SENDER_EMAIL or SENDER_PASSWORD not set in .env file!")
-        print()
-        print("Please make sure your .env file contains:")
-        print("  SENDER_EMAIL=your-email@gmail.com")
-        print("  SENDER_PASSWORD=your-app-password")
-        print()
-        print("For Gmail:")
-        print("1. Enable 2-Step Verification")
-        print("2. Generate an App Password: https://myaccount.google.com/apppasswords")
-        print("3. Use the app password (not your regular password)")
-        print()
+        # print()
+        # print("Please make sure your .env file contains:")
+        # print("  SENDER_EMAIL=your-email@gmail.com")
+        # print("  SENDER_PASSWORD=your-app-password")
+        # print()
+        # print("For Gmail:")
+        # print("1. Enable 2-Step Verification")
+        # print("2. Generate an App Password: https://myaccount.google.com/apppasswords")
+        # print("3. Use the app password (not your regular password)")
+        # print()
         return
     
     # Read contacts

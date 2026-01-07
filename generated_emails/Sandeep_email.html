@@ -98,7 +98,7 @@
       }
       .email-wrapper {
         width: 100% !important;
-        padding: 10px !important;
+        padding: 0 !important;
       }
       .mobile-padding {
         padding: 16px !important;
@@ -118,6 +118,9 @@
       .mobile-section-title {
         font-size: 16px !important;
       }
+      .mobile-product-row {
+        width: 100% !important;
+      }
       .mobile-product {
         width: 50% !important;
         display: table-cell !important;
@@ -129,16 +132,16 @@
       .mobile-product-image {
         width: 100% !important;
         max-width: 100% !important;
-        height: auto !important;
-        max-height: 140px !important;
-        object-fit: contain !important;
+        /* height: 120px !important; */
+        /* object-fit: contain !important; */
       }
       .product-image-container {
-        height: 164px !important;
+        height: auto !important;
       }
       .product-card {
-        height: 290px !important;
-        min-height: 290px !important;
+        height: 350px !important;
+        min-height: auto !important;
+        max-height: 350px !important;
       }
       .mobile-footer-padding {
         padding: 24px 16px !important;
@@ -170,13 +173,13 @@
     <tr>
       <td align="center" style="padding: 20px 0;" class="email-wrapper">
         
-        <table role="presentation" cellpadding="0" cellspacing="0" width="600" class="email-container" style="background-color: #ffffff !important; border-collapse: collapse; max-width: 100%; width: 600px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" width="100%" class="email-container" style="background-color: #ffffff !important; border-collapse: collapse; max-width: 600px; width: 100%;">
           
           <tr>
-            <td style="background-color: #ffffff !important; padding: 16px 24px;" class="mobile-padding logo-bg-white">
+            <td align="center" style="background-color: #ffffff !important; padding: 16px 24px; text-align: center;" class="mobile-padding logo-bg-white">
               <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff !important;">
                 <tr>
-                  <td align="center" style="background-color: #ffffff !important;">
+                  <td align="center" style="background-color: #ffffff !important; text-align: center;">
                     <a href="https://bhaktienterprises.co.in" style="text-decoration: none; display: inline-block;">
                       <img src="https://bhaktienterprises.co.in/images/demos/demo9/logo.png" alt="Bhakti Enterprises" style="height: 40px; width: auto; max-width: 100%; display: block; background-color: #ffffff !important;" class="fade-in">
                     </a>
@@ -245,25 +248,25 @@
             <td style="padding: 0 24px;" class="mobile-padding">
               <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
-                  <td width="50%" style="padding-right: 8px; padding-bottom: 16px; vertical-align: top;" class="mobile-product">
+                  <td width="50%" style="padding: 0 4px 16px 4px; vertical-align: top; " class="mobile-product">
                     <a href="https://wa.me/+919225089572" style="text-decoration: none; display: block;" class="product-hover">
-                      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #e2e8f0; border-radius: 4px; background-color: #ffffff !important; height: 100%;" class="product-card">
+                      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" height="312px" style="border: 1px solid #e2e8f0; border-radius: 4px; background-color: #ffffff !important;" class="product-card">
                         <tr>
-                          <td align="center" style="padding: 12px; height: 164px; width: 100%; vertical-align: middle;" class="product-image-container">
-                            <img src="https://bhakti-enterprises.github.io/Email_HTML/assets/toner.webp" alt="Premium Toner Cartridge" style="display: block; border-radius: 4px; object-fit: cover; background-color: #f1f5f9; margin: 0 auto; width: 80%; max-width: 100%; height: 140px;" class="mobile-product-image" onerror="this.src='https://via.placeholder.com/120x120/1a365d/ffffff?text=Toner'">
+                          <td align="center" style="padding: 12px; vertical-align: middle;" class="product-image-container">
+                            <img src="https://bhakti-enterprises.github.io/Email_HTML/assets/toner.webp" alt="Premium Toner Cartridge" width="120" style="display: block; border-radius: 4px; object-fit: contain; background-color: #ffffff; margin: 0 auto; max-width: 100%; width: 100%; height: 162px;" class="mobile-product-image" onerror="this.src='https://via.placeholder.com/120x120/1a365d/ffffff?text=Toner'">
                           </td>
                         </tr>
                         <tr>
-                          <td style="padding: 0 12px 12px 12px;">
+                          <td align="center" style="padding: 0 12px 12px 12px; text-align: center;">
                             <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
                               <tr>
-                                <td style="color: #00bfff; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding-bottom: 4px; text-align: center;" class="product-text">
+                                <td align="center" style="color: #00bfff; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding-bottom: 4px; text-align: center;" class="product-text">
                                   Genuine Toner Cartridge
                                 </td>
                               </tr>
                               <tr>
-                                <td style="color: #64748b; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4; text-align: center; padding-bottom: 10px;" class="product-description">
-                                  High-yield Original Toner Cartridge
+                                <td align="center" style="color: #64748b; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4; text-align: center; padding-bottom: 10px;" class="product-description">
+                                  High-yield Original Toner
                                 </td>
                               </tr>
                               <tr>
@@ -285,25 +288,25 @@
                       </table>
                     </a>
                   </td>
-                  <td width="50%" style="padding-left: 8px; padding-bottom: 16px; vertical-align: top;" class="mobile-product">
+                  <td width="50%" style="padding: 0 4px 16px 4px; vertical-align: top; " class="mobile-product">
                     <a href="https://wa.me/+919225089572?text=Hello%2C%20I%20am%20interested%20in%20OPC%Ink%20Cartridge" style="text-decoration: none; display: block;" class="product-hover">
-                      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #e2e8f0; border-radius: 4px; background-color: #ffffff !important; height: 100%;" class="product-card">
+                      <table role="presentation" cellpadding="0" cellspacing="0" height="312px" width="100%" style="border: 1px solid #e2e8f0; border-radius: 4px; background-color: #ffffff !important;" class="product-card">
                         <tr>
-                          <td align="center" style="padding: 12px; height: 164px; vertical-align: middle;" class="product-image-container">
-                            <img src="https://bhakti-enterprises.github.io/Email_HTML/assets/ink-cartridges.webp" alt="Ink Cartridge" style="display: block; border-radius: 4px; object-fit: cover; background-color: #f1f5f9; margin: 0 auto; width: auto; max-width: 100%; height: 140px;" class="mobile-product-image">
+                          <td align="center" style="padding: 12px; vertical-align: middle;" class="product-image-container">
+                            <img src="https://bhakti-enterprises.github.io/Email_HTML/assets/ink-cartridges.webp" alt="Ink Cartridge" width="120" style="display: block; border-radius: 4px; object-fit: contain; background-color: #ffffff; margin: 0 auto; max-width: 100%; width: 100%; height: 162px;" class="mobile-product-image">
                           </td>
                         </tr>
                         <tr>
-                          <td style="padding: 0 12px 12px 12px;">
+                          <td align="center" style="padding: 0 12px 12px 12px; text-align: center;">
                             <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
                               <tr>
-                                <td style="color: #00bfff; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding-bottom: 4px; text-align: center;" class="product-text">
+                                <td align="center" style="color: #00bfff; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding-bottom: 4px; text-align: center;" class="product-text">
                                   Ink Cartridge
                                 </td>
                               </tr>
                               <tr>
-                                <td style="color: #64748b; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4; text-align: center; padding-bottom: 10px;" class="product-description">
-                                  High-yield Original Ink
+                                <td align="center" style="color: #64748b; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4; text-align: center; padding-bottom: 10px;" class="product-description">
+                                  Original Ink Cartridge
                                 </td>
                               </tr>
                               <tr>
@@ -334,24 +337,24 @@
             <td style="padding: 0 24px;" class="mobile-padding">
               <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
-                  <td width="50%" style="padding-right: 8px; padding-bottom: 16px; vertical-align: top;" class="mobile-product">
+                  <td width="50%" style="padding: 0 4px 16px 4px; vertical-align: top;" class="mobile-product">
                     <a href="https://wa.me/+919225089572" style="text-decoration: none; display: block;" class="product-hover">
-                      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #e2e8f0; border-radius: 4px; background-color: #ffffff !important; height: 100%;" class="product-card">
+                      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #e2e8f0; border-radius: 4px; background-color: #ffffff !important;" class="product-card">
                         <tr>
-                          <td align="center" style="padding: 12px; height: 164px; vertical-align: middle;" class="product-image-container">
-                            <img src="https://bhakti-enterprises.github.io/Email_HTML/assets/drum-units.webp" alt="Developing Unit" style="display: block; border-radius: 4px; object-fit: cover; background-color: #f1f5f9; margin: 0 auto; width: auto; max-width: 100%; height: 140px;" class="mobile-product-image">
+                          <td align="center" style="padding: 12px; vertical-align: middle;" class="product-image-container">
+                            <img src="https://bhakti-enterprises.github.io/Email_HTML/assets/drum-units.webp" alt="Developing Unit" width="120" style="display: block; border-radius: 4px; object-fit: contain; background-color: #ffffff; margin: 0 auto; max-width: 100%; width: 100%; height: 162px;" class="mobile-product-image">
                           </td>
                         </tr>
                         <tr>
-                          <td style="padding: 0 12px 12px 12px;">
+                          <td align="center" style="padding: 0 12px 12px 12px; text-align: center;">
                             <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
                               <tr>
-                                <td style="color: #00bfff; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding-bottom: 4px; text-align: center;" class="product-text">
+                                <td align="center" style="color: #00bfff; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding-bottom: 4px; text-align: center;" class="product-text">
                                   Drum Unit
                                 </td>
                               </tr>
                               <tr>
-                                <td style="color: #64748b; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4; text-align: center; padding-bottom: 10px;" class="product-description">
+                                <td align="center" style="color: #64748b; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4; text-align: center; padding-bottom: 10px;" class="product-description">
                                   Long-lasting Imaging Drum
                                 </td>
                               </tr>
@@ -374,24 +377,24 @@
                       </table>
                     </a>
                   </td>
-                  <td width="50%" style="padding-left: 8px; padding-bottom: 16px; vertical-align: top;" class="mobile-product">
+                  <td width="50%" style="padding: 0 4px 16px 4px; vertical-align: top;" class="mobile-product">
                     <a href="https://wa.me/+919225089572?text=Hello%2C%20I%20am%20interested%20in%20Inkjet%20Ink" style="text-decoration: none; display: block;" class="product-hover">
-                      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #e2e8f0; border-radius: 4px; background-color: #ffffff !important; height: 100%;" class="product-card">
+                      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #e2e8f0; border-radius: 4px; background-color: #ffffff !important;" class="product-card">
                         <tr>
-                          <td align="center" style="padding: 12px; height: 164px; vertical-align: middle;" class="product-image-container">
-                            <img src="https://bhakti-enterprises.github.io/Email_HTML/assets/ink.webp" alt="Pickup Roller Kit" style="display: block; border-radius: 4px; object-fit: cover; background-color: #f1f5f9; margin: 0 auto; width: auto; max-width: 100%; height: 140px;" class="mobile-product-image">
+                          <td align="center" style="padding: 12px; vertical-align: middle;" class="product-image-container">
+                            <img src="https://bhakti-enterprises.github.io/Email_HTML/assets/ink.webp" alt="Inkjet Ink" width="120" style="display: block; border-radius: 4px; object-fit: contain; background-color: #ffffff; margin: 0 auto; max-width: 100%; width: 100%; height: 162px;" class="mobile-product-image">
                           </td>
                         </tr>
                         <tr>
-                          <td style="padding: 0 12px 12px 12px;">
+                          <td align="center" style="padding: 0 12px 12px 12px; text-align: center;">
                             <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
                               <tr>
-                                <td style="color: #00bfff; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding-bottom: 4px; text-align: center;" class="product-text">
+                                <td align="center" style="color: #00bfff; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding-bottom: 4px; text-align: center;" class="product-text">
                                  Inkjet Ink
                                 </td>
                               </tr>
                               <tr>
-                                <td style="color: #64748b; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4; text-align: center; padding-bottom: 10px;" class="product-description">
+                                <td align="center" style="color: #64748b; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4; text-align: center; padding-bottom: 10px;" class="product-description">
                                   High-yield Original Ink
                                 </td>
                               </tr>
@@ -423,24 +426,24 @@
             <td style="padding: 0 24px 24px 24px;" class="mobile-padding">
               <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
-                  <td width="50%" style="padding-right: 8px; padding-bottom: 16px; vertical-align: top;" class="mobile-product">
+                  <td width="50%" style="padding: 0 4px 16px 4px; vertical-align: top;" class="mobile-product">
                     <a href="https://wa.me/+919225089572?text=Hello%2C%20I%20am%20interested%20in%20Multifunction%20Copier" style="text-decoration: none; display: block;" class="product-hover">
-                      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #e2e8f0; border-radius: 4px; background-color: #ffffff !important; height: 100%;" class="product-card">
+                      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #e2e8f0; border-radius: 4px; background-color: #ffffff !important;" class="product-card">
                         <tr>
-                          <td align="center" style="padding: 12px; height: 164px; vertical-align: middle;" class="product-image-container">
-                            <img src="https://bhakti-enterprises.github.io/Email_HTML/assets/printers.webp" alt="Multifunction Copier" style="display: block; border-radius: 4px; object-fit: cover; background-color: #f1f5f9; margin: 0 auto; width: auto; max-width: 100%; height: 140px;" class="mobile-product-image">
+                          <td align="center" style="padding: 12px; vertical-align: middle;" class="product-image-container">
+                            <img src="https://bhakti-enterprises.github.io/Email_HTML/assets/printers.webp" alt="Multifunction Copier" width="120" style="display: block; border-radius: 4px; object-fit: contain; background-color: #ffffff; margin: 0 auto; max-width: 100%; width: 100%; height: 162px;" class="mobile-product-image">
                           </td>
                         </tr>
                         <tr>
-                          <td style="padding: 0 12px 12px 12px;">
+                          <td align="center" style="padding: 0 12px 12px 12px; text-align: center;">
                             <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
                               <tr>
-                                <td style="color: #00bfff; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding-bottom: 4px; text-align: center;" class="product-text">
+                                <td align="center" style="color: #00bfff; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding-bottom: 4px; text-align: center;" class="product-text">
                                   Multifunction Printers
                                 </td>
                               </tr>
                               <tr>
-                                <td style="color: #64748b; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4; text-align: center; padding-bottom: 10px;" class="product-description">
+                                <td align="center" style="color: #64748b; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4; text-align: center; padding-bottom: 10px;" class="product-description">
                                   Commercial-grade Solutions
                                 </td>
                               </tr>
@@ -463,25 +466,25 @@
                       </table>
                     </a>
                   </td>
-                  <td width="50%" style="padding-right: 8px; padding-bottom: 16px; vertical-align: top;" class="mobile-product">
+                  <td width="50%" style="padding: 0 4px 16px 4px; vertical-align: top;" class="mobile-product">
                     <a href="https://wa.me/+919225089572?text=Hello%2C%20I%20am%20interested%20in%20Plotters" style="text-decoration: none; display: block;" class="product-hover">
-                      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #e2e8f0; border-radius: 4px; background-color: #ffffff !important; height: 100%;" class="product-card">
+                      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #e2e8f0; border-radius: 4px; background-color: #ffffff !important;" class="product-card">
                         <tr>
-                          <td align="center" style="padding: 12px; height: 164px; vertical-align: middle;" class="product-image-container">
-                            <img src="https://bhakti-enterprises.github.io/Email_HTML/assets/PLOTTER.webp" alt="Plotter" style="display: block; border-radius: 4px; object-fit: cover; background-color: #f1f5f9; margin: 0 auto; width: auto; max-width: 100%; height: 140px;" class="mobile-product-image">
+                          <td align="center" style="padding: 12px; vertical-align: middle;" class="product-image-container">
+                            <img src="https://bhakti-enterprises.github.io/Email_HTML/assets/PLOTTER.webp" alt="Plotter" width="120" style="display: block; border-radius: 4px; object-fit: contain; background-color: #ffffff; margin: 0 auto; max-width: 100%; width: 100%; height: 162px;" class="mobile-product-image">
                           </td>
                         </tr>
                         <tr>
-                          <td style="padding: 0 12px 12px 12px;">
+                          <td align="center" style="padding: 0 12px 12px 12px; text-align: center;">
                             <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
                               <tr>
-                                <td style="color: #00bfff; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding-bottom: 4px; text-align: center;" class="product-text">
-                                  Plotters
+                                <td align="center" style="color: #00bfff; font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; padding-bottom: 4px; text-align: center;" class="product-text">
+                                  Plotter
                                 </td>
                               </tr>
                               <tr>
-                                <td style="color: #64748b; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4; text-align: center; padding-bottom: 10px;" class="product-description">
-                                  Industrial-Grade Plotting Machines
+                                <td align="center" style="color: #64748b; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4; text-align: center; padding-bottom: 10px;" class="product-description">
+                                  Industrial-Grade Plotter
                                 </td>
                               </tr>
                               <tr>
@@ -512,7 +515,7 @@
               <td style="padding: 32px 24px 16px 24px;" class="mobile-padding">
                 <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
                   <tr>
-                    <td style="color: #00bfff; font-size: 18px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; border-bottom: 2px solid #00bfff; padding-bottom: 8px; text-align: left;" class="mobile-section-title section-title">
+                    <td align="center" style="color: #00bfff; font-size: 18px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; border-bottom: 2px solid #00bfff; padding-bottom: 8px; text-align: center;" class="mobile-section-title section-title">
                       We Deals In
                     </td>
                   </tr>
@@ -564,7 +567,7 @@
           
         </table>
         
-        <table role="presentation" cellpadding="0" cellspacing="0" width="600" class="email-container" style="margin: 20px auto 0 auto; max-width: 100%; width: 600px; background-color: #ffffff !important;">
+        <table role="presentation" cellpadding="0" cellspacing="0" width="100%" class="email-container" style="margin-top: 20px; margin-right: auto; margin-left: auto; max-width: 600px; width: 100%; background-color: #ffffff !important;">
           <tr>
             <td align="center" style="padding: 16px 24px; background-color: #ffffff !important;" class="mobile-padding">
               <table role="presentation" cellpadding="0" cellspacing="0">
@@ -580,7 +583,7 @@
           </tr>
         </table>
         
-        <table role="presentation" cellpadding="0" cellspacing="0" width="600" class="email-container" style="margin: 0 auto; background-color: #1a365d; max-width: 100%; width: 600px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" width="100%" class="email-container" style="margin: 0; background-color: #1a365d; max-width: 600px; width: 100%;">
           <tr>
             <td style="padding: 32px 24px;" class="mobile-footer-padding">
               <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
