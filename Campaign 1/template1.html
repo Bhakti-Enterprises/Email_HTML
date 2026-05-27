@@ -24,6 +24,11 @@ body, table, td, a {
 }
 table, td { mso-table-lspace:0pt; mso-table-rspace:0pt; }
 img { -ms-interpolation-mode:bicubic; border:0; display:block; outline:none; line-height:100%; }
+.img-lock-64 { width:64px !important; max-width:64px !important; min-width:64px !important; height:64px !important; }
+.img-lock-32 { width:32px !important; max-width:32px !important; min-width:32px !important; height:32px !important; }
+.img-lock-30 { width:30px !important; max-width:30px !important; min-width:30px !important; height:30px !important; }
+.img-lock-28 { width:28px !important; max-width:28px !important; min-width:28px !important; height:28px !important; }
+.img-lock-26 { width:26px !important; max-width:26px !important; min-width:26px !important; height:26px !important; }
 body { margin:0; padding:0; width:100% !important; height:100% !important; background-color:#f3f5f9; }
 a { text-decoration:none; }
 
@@ -151,6 +156,8 @@ a { text-decoration:none; }
   .mob-footer-contact table { margin:0 auto !important; }
   .mob-footer-contact-div { display:none !important; width:0 !important; max-height:0 !important; overflow:hidden !important; }
   .type-footer-icon { text-align:center !important; }
+  .center-gutter { display:none !important; width:0 !important; max-height:0 !important; overflow:hidden !important; font-size:0 !important; line-height:0 !important; }
+  .center-body { width:100% !important; max-width:100% !important; }
 }
 </style>
 <!--[if mso]>
@@ -171,18 +178,22 @@ body, table, td, p, a, li { font-family:'Segoe UI',Helvetica,Arial,sans-serif !i
   Goal:         Claim $1000 shipping credit on first eligible B2B order
   Audience:     B2B procurement / copier & printer buyers
   Stage:        Decision (post-enquiry follow-up)
-  Primary CTA:  Claim Your $1000 Coupon → {{CTA_URL}}
+  Primary CTA:  Claim Your $1000 Coupon → WhatsApp +91 98202 29230 (pre-filled message with {{COUPON_CODE}})
   Preheader:    Your $1000 B2B shipping coupon is ready — use code BE1000SHIP before 27th August 2026
   Offer:        BE1000SHIP — $1000 off shipping, min order $10,000, coupon expires 27 Aug 2026
   Trust signals: Genuine products, B2B network, pan-India delivery, brand compatibility logos
 -->
 
-<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#f3f5f9" style="background-color:#f3f5f9;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#f3f5f9" style="width:100%; background-color:#f3f5f9;">
 <tr>
-<td align="center" style="padding:20px 0;">
+<td align="center" style="padding:20px 0; text-align:center;">
 
 <!-- MAIN WRAPPER -->
-<table width="620" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#ffffff" class="wrapper" style="width:620px; max-width:620px; background-color:#ffffff;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td width="50%" class="center-gutter" style="width:50%; font-size:0; line-height:0; mso-line-height-rule:exactly;">&nbsp;</td>
+<td align="center" width="620" class="center-body" style="width:620px; max-width:620px; text-align:center;">
+<table width="620" align="center" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#ffffff" class="wrapper" style="margin:0 auto; width:620px; max-width:620px; background-color:#ffffff;">
 
 <!-- ════ HEADER ════ -->
 <tr>
@@ -259,13 +270,13 @@ Your Exclusive Coupon Code
 <tr>
 <td align="center" bgcolor="#18b81e" style="background-color:#18b81e; border-radius:10px;">
 <!--[if mso]>
-<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="{{CTA_URL}}" style="height:54px;v-text-anchor:middle;width:320px;" arcsize="18%" stroke="f" fillcolor="#18b81e">
+<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="https://wa.me/919820229230?text=Hi%20Bhakti%20Enterprises%2C%0AI%20received%20the%20%241000%20shipping%20coupon%20code%20{{COUPON_CODE}}.%0AI%20would%20like%20to%20use%20it%20for%20my%20shipment." style="height:54px;v-text-anchor:middle;width:320px;" arcsize="18%" stroke="f" fillcolor="#18b81e">
 <w:anchorlock/>
 <center style="color:#ffffff;font-family:'Segoe UI',Helvetica,Arial,sans-serif;font-size:17px;font-weight:700;">Claim Your $1000 Coupon</center>
 </v:roundrect>
 <![endif]-->
 <!--[if !mso]><!-- -->
-<a href="{{CTA_URL}}" class="type-cta" style="display:inline-block; padding:18px 44px; font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:17px; line-height:1; font-weight:700; letter-spacing:0.02em; color:#ffffff; text-decoration:none; border-radius:10px;">Claim Your $1000 Coupon</a>
+<a href="https://wa.me/919820229230?text=Hi%20Bhakti%20Enterprises%2C%0AI%20received%20the%20%241000%20shipping%20coupon%20code%20{{COUPON_CODE}}.%0AI%20would%20like%20to%20use%20it%20for%20my%20shipment." class="type-cta" style="display:inline-block; padding:18px 44px; font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:17px; line-height:1; font-weight:700; letter-spacing:0.02em; color:#ffffff; text-decoration:none; border-radius:10px;">Claim Your $1000 Coupon</a>
 <!--<![endif]-->
 </td>
 </tr>
@@ -311,82 +322,109 @@ How Your $1000 Shipping Credit Works
 <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin-top:22px;">
 <tr>
 <!-- STEP 1 -->
-<td width="28%" align="center" valign="top" bgcolor="#ffffff" class="mob-stack" style="width:28%; background-color:#ffffff; border-radius:10px; vertical-align:top; padding:18px 8px;">
+<td width="28%" align="center" valign="top" bgcolor="#ffffff" class="mob-stack" style="width:28%; background-color:#ffffff; border-radius:10px; vertical-align:top; padding:18px 8px; text-align:center;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center">
+<tr>
+<td align="center" style="text-align:center;">
 <table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center">
 <tr>
 <td width="32" height="32" align="center" valign="middle" bgcolor="#0b3b8c" style="width:32px; height:32px; background-color:#0b3b8c; border-radius:16px; font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:16px; line-height:32px; font-weight:700; color:#ffffff; text-align:center;">1</td>
 </tr>
 </table>
-<table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" width="74" style="width:74px; margin:12px auto 10px auto;">
+<table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" width="64" style="width:64px; max-width:64px; margin:12px auto 10px auto;">
 <tr>
-<td align="center" colspan="2" style="line-height:0; font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/1.png" width="64" height="64" alt="Enquiry received" style="display:block; width:64px; height:64px; margin:0 auto; border:0;">
+<td align="center" width="64" style="width:64px; max-width:64px; min-width:64px; line-height:0; font-size:0; mso-line-height-rule:exactly;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/1.png" width="64" height="64" alt="Enquiry received" class="img-lock-64" style="display:block; width:64px; max-width:64px; min-width:64px; height:64px; border:0; margin:0 auto;">
 </td>
 </tr>
 <tr>
-<td width="48" style="width:48px; font-size:0; line-height:0; mso-line-height-rule:exactly;">&nbsp;</td>
-<td align="left" valign="top" width="26" style="width:26px; line-height:0; font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/5.png" width="26" height="26" alt="" style="display:block; width:26px; height:26px; margin-top:-22px; border:0;">
+<td align="right" width="64" style="width:64px; max-width:64px; min-width:64px; line-height:0; font-size:0; mso-line-height-rule:exactly;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/5.png" width="26" height="26" alt="" class="img-lock-26" style="display:block; width:26px; max-width:26px; min-width:26px; height:26px; margin-top:-22px; border:0;">
 </td>
 </tr>
 </table>
-<div class="type-step" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:12px; line-height:16px; font-weight:700; color:#0b3b8c; text-align:center;">
+<table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" width="100%">
+<tr>
+<td align="center" class="type-step" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:12px; line-height:16px; font-weight:700; color:#0b3b8c; text-align:center;">
 We have received<br>your enquiry successfully.
-</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
 </td>
 <td width="8%" align="center" valign="middle" class="mob-hide" style="width:8%; min-width:40px; vertical-align:middle; padding:0; line-height:0; font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/arrow.png" width="40" alt="" style="display:block; width:40px; max-width:40px; height:fit-content; opacity:1; margin:0 auto; border:0;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/arrow.png" width="40" height="24" alt="" style="display:block; width:40px; max-width:40px; height:auto; margin:0 auto; border:0;">
 </td>
 <!-- STEP 2 -->
-<td width="28%" align="center" valign="top" bgcolor="#ffffff" class="mob-stack" style="width:28%; background-color:#ffffff; border-radius:10px; vertical-align:top; padding:18px 8px;">
+<td width="28%" align="center" valign="top" bgcolor="#ffffff" class="mob-stack" style="width:28%; background-color:#ffffff; border-radius:10px; vertical-align:top; padding:18px 8px; text-align:center;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center">
+<tr>
+<td align="center" style="text-align:center;">
 <table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center">
 <tr>
 <td width="32" height="32" align="center" valign="middle" bgcolor="#0b3b8c" style="width:32px; height:32px; background-color:#0b3b8c; border-radius:16px; font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:16px; line-height:32px; font-weight:700; color:#ffffff; text-align:center;">2</td>
 </tr>
 </table>
-<table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" width="74" style="width:74px; margin:12px auto 10px auto;">
+<table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" width="64" style="width:64px; max-width:64px; margin:12px auto 10px auto;">
 <tr>
-<td align="center" colspan="2" style="line-height:0; font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/3.png" width="64" height="64" alt="We will contact you" style="display:block; width:64px; height:64px; margin:0 auto; border:0;">
+<td align="center" width="64" style="width:64px; max-width:64px; min-width:64px; line-height:0; font-size:0; mso-line-height-rule:exactly;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/3.png" width="64" height="64" alt="We will contact you" class="img-lock-64" style="display:block; width:64px; max-width:64px; min-width:64px; height:64px; border:0; margin:0 auto;">
 </td>
 </tr>
 <tr>
-<td width="48" style="width:48px; font-size:0; line-height:0; mso-line-height-rule:exactly;">&nbsp;</td>
-<td align="left" valign="top" width="26" style="width:26px; line-height:0; font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/2.png" width="26" height="26" alt="" style="display:block; width:26px; height:26px; margin-top:-22px; border:0;">
+<td align="right" width="64" style="width:64px; max-width:64px; min-width:64px; line-height:0; font-size:0; mso-line-height-rule:exactly;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/2.png" width="26" height="26" alt="" class="img-lock-26" style="display:block; width:26px; max-width:26px; min-width:26px; height:26px; margin-top:-22px; border:0;">
 </td>
 </tr>
 </table>
-<div class="type-step" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:12px; line-height:16px; font-weight:700; color:#0b3b8c; text-align:center;">
+<table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" width="100%">
+<tr>
+<td align="center" class="type-step" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:12px; line-height:16px; font-weight:700; color:#0b3b8c; text-align:center;">
 We will contact you soon<br>with your enquiry.
-</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
 </td>
 <td width="8%" align="center" valign="middle" class="mob-hide" style="width:8%; min-width:40px; vertical-align:middle; padding:0; line-height:0; font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/arrow.png" width="40" alt="" style="display:block; width:40px; max-width:40px; height:fit-content; opacity:1; margin:0 auto; border:0;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/arrow.png" width="40" height="24" alt="" style="display:block; width:40px; max-width:40px; height:auto; margin:0 auto; border:0;">
 </td>
 <!-- STEP 3 -->
-<td width="28%" align="center" valign="top" bgcolor="#ffffff" class="mob-stack" style="width:28%; background-color:#ffffff; border-radius:10px; vertical-align:top; padding:18px 8px;">
+<td width="28%" align="center" valign="top" bgcolor="#ffffff" class="mob-stack" style="width:28%; background-color:#ffffff; border-radius:10px; vertical-align:top; padding:18px 8px; text-align:center;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center">
+<tr>
+<td align="center" style="text-align:center;">
 <table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center">
 <tr>
 <td width="32" height="32" align="center" valign="middle" bgcolor="#0b3b8c" style="width:32px; height:32px; background-color:#0b3b8c; border-radius:16px; font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:16px; line-height:32px; font-weight:700; color:#ffffff; text-align:center;">3</td>
 </tr>
 </table>
-<table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" width="74" style="width:74px; margin:12px auto 10px auto;">
+<table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" width="64" style="width:64px; max-width:64px; margin:12px auto 10px auto;">
 <tr>
-<td align="center" colspan="2" style="line-height:0; font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/4.png" width="64" height="64" alt="$1000 coupon applied" style="display:block; width:64px; height:64px; margin:0 auto; border:0;">
+<td align="center" width="64" style="width:64px; max-width:64px; min-width:64px; line-height:0; font-size:0; mso-line-height-rule:exactly;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/4.png" width="64" height="64" alt="$1000 coupon applied" class="img-lock-64" style="display:block; width:64px; max-width:64px; min-width:64px; height:64px; border:0; margin:0 auto;">
 </td>
 </tr>
 <tr>
-<td width="48" style="width:48px; font-size:0; line-height:0; mso-line-height-rule:exactly;">&nbsp;</td>
-<td align="left" valign="top" width="26" style="width:26px; line-height:0; font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/5.png" width="26" height="26" alt="" style="display:block; width:26px; height:26px; margin-top:-22px; border:0;">
+<td align="right" width="64" style="width:64px; max-width:64px; min-width:64px; line-height:0; font-size:0; mso-line-height-rule:exactly;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/5.png" width="26" height="26" alt="" class="img-lock-26" style="display:block; width:26px; max-width:26px; min-width:26px; height:26px; margin-top:-22px; border:0;">
 </td>
 </tr>
 </table>
-<div class="type-step" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:12px; line-height:16px; font-weight:700; color:#0b3b8c; text-align:center;">
+<table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" width="100%">
+<tr>
+<td align="center" class="type-step" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:12px; line-height:16px; font-weight:700; color:#0b3b8c; text-align:center;">
 We will <span style="color:#2aa84a;">automatically<br>apply this coupon</span> to<br>your first eligible order.
-</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
 </td>
 </tr>
 </table>
@@ -400,8 +438,8 @@ We will <span style="color:#2aa84a;">automatically<br>apply this coupon</span> t
 <td width="33.33%" align="center" valign="middle" class="mob-stack mob-info-col" style="width:33.33%; vertical-align:middle; padding:16px 10px; border-right:1px solid #d0dff0;">
 <table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center">
 <tr>
-<td valign="middle" style="padding-right:10px; line-height:0; font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/11.png" width="30" height="30" alt="" style="display:block; width:30px; height:30px; border:0;">
+<td width="30" valign="middle" style="width:30px; max-width:30px; min-width:30px; padding-right:10px; line-height:0; font-size:0; mso-line-height-rule:exactly;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/11.png" width="30" height="30" alt="" class="img-lock-30" style="display:block; width:30px; max-width:30px; min-width:30px; height:30px; border:0;">
 </td>
 <td valign="middle" align="left" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:12px; line-height:17px; font-weight:600; color:#103060; text-align:left;">
 Minimum Order Value<br>$10,000 or more
@@ -412,8 +450,8 @@ Minimum Order Value<br>$10,000 or more
 <td width="33.33%" align="center" valign="middle" class="mob-stack mob-info-col" style="width:33.33%; vertical-align:middle; padding:16px 10px; border-right:1px solid #d0dff0;">
 <table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center">
 <tr>
-<td valign="middle" style="padding-right:10px; line-height:0; font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/12.png" width="30" height="30" alt="" style="display:block; width:30px; height:30px; border:0;">
+<td width="30" valign="middle" style="width:30px; max-width:30px; min-width:30px; padding-right:10px; line-height:0; font-size:0; mso-line-height-rule:exactly;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/12.png" width="30" height="30" alt="" class="img-lock-30" style="display:block; width:30px; max-width:30px; min-width:30px; height:30px; border:0;">
 </td>
 <td valign="middle" align="left" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:12px; line-height:17px; font-weight:600; color:#103060; text-align:left;">
 Coupon Valid Till<br>{{COUPON_EXPIRY_DATE}}
@@ -424,8 +462,8 @@ Coupon Valid Till<br>{{COUPON_EXPIRY_DATE}}
 <td width="33.33%" align="center" valign="middle" class="mob-stack mob-info-col mob-info-col-last" style="width:33.33%; vertical-align:middle; padding:16px 10px;">
 <table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center">
 <tr>
-<td valign="middle" style="padding-right:10px; line-height:0; font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/13.png" width="30" height="30" alt="" style="display:block; width:30px; height:30px; border:0;">
+<td width="30" valign="middle" style="width:30px; max-width:30px; min-width:30px; padding-right:10px; line-height:0; font-size:0; mso-line-height-rule:exactly;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/13.png" width="30" height="30" alt="" class="img-lock-30" style="display:block; width:30px; max-width:30px; min-width:30px; height:30px; border:0;">
 </td>
 <td valign="middle" align="left" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:12px; line-height:17px; font-weight:600; color:#103060; text-align:left;">
 Applicable On<br>Shipping Charges Only
@@ -500,13 +538,13 @@ LEADING COPIER &amp; PRINTER BRANDS
 <tr>
 <td align="center" bgcolor="#18b81e" style="background-color:#18b81e; border-radius:10px;">
 <!--[if mso]>
-<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="{{CTA_URL}}" style="height:54px;v-text-anchor:middle;width:320px;" arcsize="18%" stroke="f" fillcolor="#18b81e">
+<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="https://wa.me/919820229230?text=Hi%20Bhakti%20Enterprises%2C%0AI%20received%20the%20%241000%20shipping%20coupon%20code%20{{COUPON_CODE}}.%0AI%20would%20like%20to%20use%20it%20for%20my%20shipment." style="height:54px;v-text-anchor:middle;width:320px;" arcsize="18%" stroke="f" fillcolor="#18b81e">
 <w:anchorlock/>
 <center style="color:#ffffff;font-family:'Segoe UI',Helvetica,Arial,sans-serif;font-size:17px;font-weight:700;">Claim Your $1000 Coupon</center>
 </v:roundrect>
 <![endif]-->
 <!--[if !mso]><!-- -->
-<a href="{{CTA_URL}}" class="type-cta" style="display:inline-block; padding:18px 44px; font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:17px; line-height:1; font-weight:700; letter-spacing:0.02em; color:#ffffff; text-decoration:none; border-radius:10px;">Claim Your $1000 Coupon</a>
+<a href="https://wa.me/919820229230?text=Hi%20Bhakti%20Enterprises%2C%0AI%20received%20the%20%241000%20shipping%20coupon%20code%20{{COUPON_CODE}}.%0AI%20would%20like%20to%20use%20it%20for%20my%20shipment." class="type-cta" style="display:inline-block; padding:18px 44px; font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:17px; line-height:1; font-weight:700; letter-spacing:0.02em; color:#ffffff; text-decoration:none; border-radius:10px;">Claim Your $1000 Coupon</a>
 <!--<![endif]-->
 </td>
 </tr>
@@ -533,8 +571,8 @@ Coupon expires {{COUPON_EXPIRY_DATE}}
 <td valign="middle" width="25%" class="mob-footer-item" style="width:25%; padding:8px 6px; vertical-align:middle;">
 <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin:0 auto;">
 <tr>
-<td valign="middle" style="padding-right:8px; vertical-align:middle;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/6.png" width="32" height="32" alt="" style="display:block; width:32px; height:32px; border:0;">
+<td width="32" valign="middle" style="width:32px; max-width:32px; min-width:32px; padding-right:8px; vertical-align:middle; line-height:0; font-size:0; mso-line-height-rule:exactly;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/6.png" width="32" height="32" alt="" class="img-lock-32" style="display:block; width:32px; max-width:32px; min-width:32px; height:32px; border:0;">
 </td>
 <td valign="middle" class="type-footer-icon" style="padding:0; font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:12px; line-height:16px; font-weight:400; color:#ffffff; text-align:left; vertical-align:middle;">
 100% Genuine<br>Products
@@ -546,8 +584,8 @@ Coupon expires {{COUPON_EXPIRY_DATE}}
 <td valign="middle" width="25%" class="mob-footer-item" style="width:25%; padding:8px 6px; vertical-align:middle;">
 <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin:0 auto;">
 <tr>
-<td valign="middle" style="padding-right:8px; vertical-align:middle;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/7.png" width="32" height="32" alt="" style="display:block; width:32px; height:32px; border:0;">
+<td width="32" valign="middle" style="width:32px; max-width:32px; min-width:32px; padding-right:8px; vertical-align:middle; line-height:0; font-size:0; mso-line-height-rule:exactly;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/7.png" width="32" height="32" alt="" class="img-lock-32" style="display:block; width:32px; max-width:32px; min-width:32px; height:32px; border:0;">
 </td>
 <td valign="middle" class="type-footer-icon" style="padding:0; font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:12px; line-height:16px; font-weight:400; color:#ffffff; text-align:left; vertical-align:middle;">
 Strong<br>B2B Network
@@ -559,8 +597,8 @@ Strong<br>B2B Network
 <td valign="middle" width="25%" class="mob-footer-item" style="width:25%; padding:8px 6px; vertical-align:middle;">
 <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin:0 auto;">
 <tr>
-<td valign="middle" style="padding-right:8px; vertical-align:middle;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/8.png" width="32" height="32" alt="" style="display:block; width:32px; height:32px; border:0;">
+<td width="32" valign="middle" style="width:32px; max-width:32px; min-width:32px; padding-right:8px; vertical-align:middle; line-height:0; font-size:0; mso-line-height-rule:exactly;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/8.png" width="32" height="32" alt="" class="img-lock-32" style="display:block; width:32px; max-width:32px; min-width:32px; height:32px; border:0;">
 </td>
 <td valign="middle" class="type-footer-icon" style="padding:0; font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:12px; line-height:16px; font-weight:400; color:#ffffff; text-align:left; vertical-align:middle;">
 Pan India<br>Delivery
@@ -572,8 +610,8 @@ Pan India<br>Delivery
 <td valign="middle" width="25%" class="mob-footer-item" style="width:25%; padding:8px 6px; vertical-align:middle;">
 <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin:0 auto;">
 <tr>
-<td valign="middle" style="padding-right:8px; vertical-align:middle;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/9.png" width="32" height="32" alt="" style="display:block; width:32px; height:32px; border:0;">
+<td width="32" valign="middle" style="width:32px; max-width:32px; min-width:32px; padding-right:8px; vertical-align:middle; line-height:0; font-size:0; mso-line-height-rule:exactly;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/9.png" width="32" height="32" alt="" class="img-lock-32" style="display:block; width:32px; max-width:32px; min-width:32px; height:32px; border:0;">
 </td>
 <td valign="middle" class="type-footer-icon" style="padding:0; font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:12px; line-height:16px; font-weight:400; color:#ffffff; text-align:left; vertical-align:middle;">
 Dedicated<br>B2B Support
@@ -604,8 +642,8 @@ Dedicated<br>B2B Support
 <td valign="middle" class="mob-footer-contact" style="padding:0 18px; vertical-align:middle; white-space:nowrap;">
 <table cellpadding="0" cellspacing="0" border="0" role="presentation">
 <tr>
-<td valign="middle" style="padding-right:10px; vertical-align:middle;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/14.png" width="28" height="28" alt="" style="display:block; width:28px; height:28px; border:0;">
+<td width="28" valign="middle" style="width:28px; max-width:28px; min-width:28px; padding-right:10px; vertical-align:middle; line-height:0; font-size:0; mso-line-height-rule:exactly;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/14.png" width="28" height="28" alt="" class="img-lock-28" style="display:block; width:28px; max-width:28px; min-width:28px; height:28px; border:0;">
 </td>
 <td valign="middle" class="type-footer-contact" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; font-weight:400; color:#ffffff; text-align:left; vertical-align:middle;">
 Need Help? Contact Us: <strong style="font-weight:700; color:#ffffff;">+91 98202 29230</strong>
@@ -617,8 +655,8 @@ Need Help? Contact Us: <strong style="font-weight:700; color:#ffffff;">+91 98202
 <td valign="middle" class="mob-footer-contact" style="padding:0 18px; vertical-align:middle; white-space:nowrap;">
 <table cellpadding="0" cellspacing="0" border="0" role="presentation">
 <tr>
-<td valign="middle" style="padding-right:10px; vertical-align:middle;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/15.png" width="28" height="28" alt="" style="display:block; width:28px; height:28px; border:0;">
+<td width="28" valign="middle" style="width:28px; max-width:28px; min-width:28px; padding-right:10px; vertical-align:middle; line-height:0; font-size:0; mso-line-height-rule:exactly;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/15.png" width="28" height="28" alt="" class="img-lock-28" style="display:block; width:28px; max-width:28px; min-width:28px; height:28px; border:0;">
 </td>
 <td valign="middle" class="type-footer-contact" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; font-weight:400; color:#ffffff; text-align:left; vertical-align:middle;">
 <a href="mailto:sales@bhaktienterprises.co.in" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:14px; line-height:20px; font-weight:400; color:#ffffff; text-decoration:none;">sales@bhaktienterprises.co.in</a>
@@ -657,6 +695,10 @@ Need Help? Contact Us: <strong style="font-weight:700; color:#ffffff;">+91 98202
 </td>
 </tr>
 
+</table>
+</td>
+<td width="50%" class="center-gutter" style="width:50%; font-size:0; line-height:0; mso-line-height-rule:exactly;">&nbsp;</td>
+</tr>
 </table>
 <!-- /MAIN WRAPPER -->
 
