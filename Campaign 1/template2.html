@@ -54,53 +54,36 @@ a { text-decoration:none; }
   .type-mono-code { font-size:30px !important; letter-spacing:0.06em !important; }
   .mob-cta a { font-size:16px !important; padding:14px 24px !important; }
 
-  /* ── FIX 1: 3-step cards — force 2-col grid using display:inline-block ── */
-  .steps-wrap { width:100% !important; }
-  .step-card {
-    display:inline-block !important;
-    width:44% !important;
-    max-width:44% !important;
-    vertical-align:top !important;
-    margin:4px 2% !important;
-    padding:14px 6px !important;
-    border-radius:10px !important;
-    background-color:#ffffff !important;
-    text-align:center !important;
-    box-sizing:border-box !important;
-  }
-  .step-arrow { display:none !important; }
-
-  /* ── FIX 2: Info bar — keep as 1-col stacked list but compact ── */
+  /* ── FIX 1: Info bar — 3-col row on all breakpoints (compact on mobile) ── */
   .info-row { width:100% !important; }
+  .info-cols { table-layout:fixed !important; width:100% !important; }
   .info-cell {
-    display:block !important;
-    width:100% !important;
-    border-right:none !important;
-    border-bottom:1px solid #d0dff0 !important;
-    padding:12px 14px !important;
+    display:table-cell !important;
+    width:33.33% !important;
+    max-width:33.33% !important;
+    padding:10px 4px !important;
     box-sizing:border-box !important;
+    vertical-align:middle !important;
   }
-  .info-cell-last { border-bottom:none !important; }
+  .info-cell .info-icon-wrap { width:22px !important; padding-right:4px !important; }
+  .info-cell .info-icon { width:22px !important; height:22px !important; }
+  .info-cell .info-text {
+    font-size:9px !important;
+    line-height:13px !important;
+  }
 
-  /* ── FIX 3: Brand logos — stay horizontal, wrap allowed ── */
-  .brands-row td {
+  /* ── FIX 3: Brand logos — centered row, wrap on small screens ── */
+  .brands-row { text-align:center !important; }
+  .brands-center { text-align:center !important; }
+  .brands-row .brand-td {
     display:inline-block !important;
-    padding:6px 10px !important;
+    padding:6px 12px !important;
     vertical-align:middle !important;
   }
 
-  /* ── FIX 4: Footer trust icons — 2×2 grid ── */
+  /* ── FIX 4: Footer trust — full-width image scales with wrapper ── */
   .footer-trust-wrap { width:100% !important; }
-  .footer-trust-item {
-    display:inline-block !important;
-    width:46% !important;
-    max-width:46% !important;
-    vertical-align:top !important;
-    padding:10px 2% !important;
-    box-sizing:border-box !important;
-    text-align:left !important;
-  }
-  .footer-vdiv { display:none !important; }
+  .footer-trust-img { width:100% !important; max-width:580px !important; height:auto !important; }
 
   /* ── FIX 5: Footer contact — stack vertically, centred ── */
   .footer-contact-item {
@@ -135,7 +118,7 @@ a { text-decoration:none; }
 <!-- HEADER -->
 <tr>
 <td align="center" bgcolor="#ffffff" style="background-color:#ffffff;padding:25px 30px;border-bottom:1px solid #e2e6ee;">
-<img src="https://bhaktienterprises.co.in/logo.png" width="260" height="87" alt="Bhakti Enterprises" style="display:block;width:260px;max-width:100%;height:auto;margin:0 auto;border:0;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/logo.png" width="260" height="84" alt="Bhakti Enterprises — Unmatched Quality &amp; Consistency" style="display:block;width:260px;max-width:100%;height:auto;margin:0 auto;border:0;">
 </td>
 </tr>
 
@@ -208,92 +191,48 @@ a { text-decoration:none; }
 </tr>
 </table>
 
-<!--
-  FIX: Steps use a single-row table on desktop.
-  On mobile, .step-card becomes display:inline-block at 44% width → 2-per-row grid.
-  The arrow cells get display:none via .step-arrow.
--->
-<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" class="steps-wrap" style="margin-top:20px;width:100%;">
+<!-- Flow diagram (replaces 3-step HTML cards) -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" class="mob-full" style="margin-top:20px;width:100%;">
 <tr>
-<!-- STEP 1 -->
-<td width="28%" align="center" valign="top" class="step-card" style="width:28%;background-color:#ffffff;border-radius:10px;vertical-align:top;padding:18px 8px;text-align:center;">
-<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center">
-<tr><td align="center">
-<table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center"><tr><td width="32" height="32" align="center" valign="middle" bgcolor="#0b3b8c" style="width:32px;height:32px;background-color:#0b3b8c;border-radius:16px;font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:32px;font-weight:700;color:#ffffff;text-align:center;">1</td></tr></table>
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/1.png" width="56" height="56" alt="Enquiry received" style="display:block;width:56px;height:56px;margin:12px auto 0 auto;border:0;">
-<p style="margin:10px 0 0 0;font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;font-weight:700;color:#0b3b8c;text-align:center;">We have received<br>your enquiry successfully.</p>
-</td></tr>
-</table>
-</td>
-<!-- ARROW 1 -->
-<td width="7%" align="center" valign="middle" class="step-arrow" style="width:7%;vertical-align:middle;padding:0;line-height:0;font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/arrow.png" width="32" height="20" alt="" style="display:block;width:32px;height:auto;margin:0 auto;border:0;">
-</td>
-<!-- STEP 2 -->
-<td width="28%" align="center" valign="top" class="step-card" style="width:28%;background-color:#ffffff;border-radius:10px;vertical-align:top;padding:18px 8px;text-align:center;">
-<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center">
-<tr><td align="center">
-<table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center"><tr><td width="32" height="32" align="center" valign="middle" bgcolor="#0b3b8c" style="width:32px;height:32px;background-color:#0b3b8c;border-radius:16px;font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:32px;font-weight:700;color:#ffffff;text-align:center;">2</td></tr></table>
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/3.png" width="56" height="56" alt="We will contact you" style="display:block;width:56px;height:56px;margin:12px auto 0 auto;border:0;">
-<p style="margin:10px 0 0 0;font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;font-weight:700;color:#0b3b8c;text-align:center;">We will contact you soon<br>with your enquiry.</p>
-</td></tr>
-</table>
-</td>
-<!-- ARROW 2 -->
-<td width="7%" align="center" valign="middle" class="step-arrow" style="width:7%;vertical-align:middle;padding:0;line-height:0;font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/arrow.png" width="32" height="20" alt="" style="display:block;width:32px;height:auto;margin:0 auto;border:0;">
-</td>
-<!-- STEP 3 -->
-<td width="28%" align="center" valign="top" class="step-card" style="width:28%;background-color:#ffffff;border-radius:10px;vertical-align:top;padding:18px 8px;text-align:center;">
-<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center">
-<tr><td align="center">
-<table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center"><tr><td width="32" height="32" align="center" valign="middle" bgcolor="#0b3b8c" style="width:32px;height:32px;background-color:#0b3b8c;border-radius:16px;font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:32px;font-weight:700;color:#ffffff;text-align:center;">3</td></tr></table>
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/4.png" width="56" height="56" alt="Coupon applied" style="display:block;width:56px;height:56px;margin:12px auto 0 auto;border:0;">
-<p style="margin:10px 0 0 0;font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;font-weight:700;color:#0b3b8c;text-align:center;">We will <span style="color:#2aa84a;">automatically<br>apply this coupon</span> to<br>your first eligible order.</p>
-</td></tr>
-</table>
+<td align="center" style="padding:0;line-height:0;font-size:0;mso-line-height-rule:exactly;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/flow2.png" width="572" height="320" alt="How your ₹1000 shipping credit works: Step 1 — We have received your enquiry successfully. Step 2 — We will contact you soon with your enquiry. Step 3 — We will automatically apply this coupon to your first eligible order." style="display:block;width:100%;max-width:572px;height:auto;margin:0 auto;border:0;">
 </td>
 </tr>
 </table>
 
-<!-- INFO BAR -->
-<!--
-  FIX: Info bar cells use .info-cell class.
-  On mobile each .info-cell becomes display:block (full width, stacked).
-  This is INTENTIONAL — 3 cols at 33% each would be too narrow on mobile.
--->
+<!-- INFO BAR — 3-col row (table-layout:fixed; compact type/icons under 640px) -->
 <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin-top:18px;" class="info-row">
 <tr>
 <td bgcolor="#eef5ff" style="background-color:#eef5ff;border-radius:10px;padding:0;">
-<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" class="info-cols" style="table-layout:fixed;width:100%;">
 <tr>
 <td width="33%" valign="middle" class="info-cell" style="width:33%;vertical-align:middle;padding:14px 10px;border-right:1px solid #d0dff0;">
-<table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
 <tr>
-<td width="28" valign="middle" style="width:28px;padding-right:8px;line-height:0;font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/11.png" width="28" height="28" alt="" style="display:block;width:28px;height:28px;border:0;">
+<td width="28" valign="middle" class="info-icon-wrap" style="width:28px;padding-right:8px;line-height:0;font-size:0;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/11.png" width="28" height="28" alt="" class="info-icon" style="display:block;width:28px;height:28px;border:0;">
 </td>
-<td valign="middle" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;line-height:16px;font-weight:600;color:#103060;">Minimum Order Value<br>₹10,000 or more</td>
+<td valign="middle" class="info-text" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;line-height:16px;font-weight:600;color:#103060;">Minimum Order Value<br>₹10,000 or more</td>
 </tr>
 </table>
 </td>
 <td width="33%" valign="middle" class="info-cell" style="width:33%;vertical-align:middle;padding:14px 10px;border-right:1px solid #d0dff0;">
-<table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
 <tr>
-<td width="28" valign="middle" style="width:28px;padding-right:8px;line-height:0;font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/12.png" width="28" height="28" alt="" style="display:block;width:28px;height:28px;border:0;">
+<td width="28" valign="middle" class="info-icon-wrap" style="width:28px;padding-right:8px;line-height:0;font-size:0;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/12.png" width="28" height="28" alt="" class="info-icon" style="display:block;width:28px;height:28px;border:0;">
 </td>
-<td valign="middle" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;line-height:16px;font-weight:600;color:#103060;">Coupon Valid Till<br>{{COUPON_EXPIRY_DATE}}</td>
+<td valign="middle" class="info-text" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;line-height:16px;font-weight:600;color:#103060;">Coupon Valid Till<br>{{COUPON_EXPIRY_DATE}}</td>
 </tr>
 </table>
 </td>
 <td width="33%" valign="middle" class="info-cell info-cell-last" style="width:33%;vertical-align:middle;padding:14px 10px;">
-<table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
 <tr>
-<td width="28" valign="middle" style="width:28px;padding-right:8px;line-height:0;font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/13.png" width="28" height="28" alt="" style="display:block;width:28px;height:28px;border:0;">
+<td width="28" valign="middle" class="info-icon-wrap" style="width:28px;padding-right:8px;line-height:0;font-size:0;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/13.png" width="28" height="28" alt="" class="info-icon" style="display:block;width:28px;height:28px;border:0;">
 </td>
-<td valign="middle" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;line-height:16px;font-weight:600;color:#103060;">Applicable On<br>Shipping Charges Only</td>
+<td valign="middle" class="info-text" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;line-height:16px;font-weight:600;color:#103060;">Applicable On<br>Shipping Charges Only</td>
 </tr>
 </table>
 </td>
@@ -325,15 +264,15 @@ a { text-decoration:none; }
 </tr>
 <tr>
 <td style="padding:20px 0 0 0;">
-<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" class="brands-row">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" class="brands-row" align="center" style="width:100%;margin:0 auto;">
 <tr>
-<td align="center" style="text-align:center;font-size:0;line-height:0;">
+<td align="center" class="brands-center" style="text-align:center;font-size:0;line-height:0;mso-line-height-rule:exactly;">
 <table cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" style="margin:0 auto;">
 <tr>
-<td align="center" valign="middle" class="brand-td" style="padding:0 12px 0 0;font-size:0;line-height:0;"><img src="https://bhaktienterprises.co.in/home/we-deals-in/hp.png" width="28" height="28" alt="HP" class="brand-logo" style="display:block;max-width:96px;max-height:28px;width:auto;height:auto;margin:0 auto;border:0;"></td>
-<td align="center" valign="middle" class="brand-td" style="padding:0 18px;font-size:0;line-height:0;"><img src="https://bhaktienterprises.co.in/home/we-deals-in/canon.png" width="96" height="20" alt="Canon" class="brand-logo" style="display:block;max-width:96px;max-height:28px;width:auto;height:auto;margin:0 auto;border:0;"></td>
-<td align="center" valign="middle" class="brand-td" style="padding:0 18px;font-size:0;line-height:0;"><img src="https://bhaktienterprises.co.in/home/we-deals-in/epson.png" width="96" height="26" alt="Epson" class="brand-logo" style="display:block;max-width:96px;max-height:28px;width:auto;height:auto;margin:0 auto;border:0;"></td>
-<td align="center" valign="middle" class="brand-td" style="padding:0 0 0 18px;font-size:0;line-height:0;"><img src="https://bhaktienterprises.co.in/home/we-deals-in/kyocera.png" width="96" height="21" alt="Kyocera" class="brand-logo" style="display:block;max-width:96px;max-height:28px;width:auto;height:auto;margin:0 auto;border:0;"></td>
+<td align="center" valign="middle" class="brand-td" style="padding:0 12px;font-size:0;line-height:0;text-align:center;"><img src="https://bhaktienterprises.co.in/home/we-deals-in/hp.png" width="28" height="28" alt="HP" class="brand-logo" style="display:block;max-width:96px;max-height:28px;width:auto;height:auto;margin:0 auto;border:0;"></td>
+<td align="center" valign="middle" class="brand-td" style="padding:0 12px;font-size:0;line-height:0;text-align:center;"><img src="https://bhaktienterprises.co.in/home/we-deals-in/canon.png" width="96" height="20" alt="Canon" class="brand-logo" style="display:block;max-width:96px;max-height:28px;width:auto;height:auto;margin:0 auto;border:0;"></td>
+<td align="center" valign="middle" class="brand-td" style="padding:0 12px;font-size:0;line-height:0;text-align:center;"><img src="https://bhaktienterprises.co.in/home/we-deals-in/epson.png" width="96" height="26" alt="Epson" class="brand-logo" style="display:block;max-width:96px;max-height:28px;width:auto;height:auto;margin:0 auto;border:0;"></td>
+<td align="center" valign="middle" class="brand-td" style="padding:0 12px;font-size:0;line-height:0;text-align:center;"><img src="https://bhaktienterprises.co.in/home/we-deals-in/kyocera.png" width="96" height="21" alt="Kyocera" class="brand-logo" style="display:block;max-width:96px;max-height:28px;width:auto;height:auto;margin:0 auto;border:0;"></td>
 </tr>
 </table>
 </td>
@@ -375,54 +314,11 @@ a { text-decoration:none; }
 <tr>
 <td bgcolor="#002a73" style="background-color:#002a73;padding:22px 20px 18px 20px;border-radius:0 0 12px 12px;">
 
-<!--
-  FIX: Trust icons use .footer-trust-item (inline-block 46% on mobile → 2×2 grid).
-  The vertical dividers use .footer-vdiv (hidden on mobile).
--->
+<!-- TRUST BAR — full-width composite (replaces 4-col icon row) -->
 <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" class="footer-trust-wrap" style="width:100%;">
 <tr>
-<td valign="middle" class="footer-trust-item" style="width:25%;padding:6px 4px;vertical-align:middle;">
-<table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin:0 auto;">
-<tr>
-<td width="30" valign="middle" style="width:30px;padding-right:8px;vertical-align:middle;line-height:0;font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/6.png" width="30" height="30" alt="" style="display:block;width:30px;height:30px;border:0;">
-</td>
-<td valign="middle" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;font-weight:400;color:#ffffff;vertical-align:middle;">100% Genuine<br>Products</td>
-</tr>
-</table>
-</td>
-<td width="1" class="footer-vdiv" style="width:1px;background-color:#3d5a99;font-size:0;line-height:0;">&nbsp;</td>
-<td valign="middle" class="footer-trust-item" style="width:25%;padding:6px 4px;vertical-align:middle;">
-<table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin:0 auto;">
-<tr>
-<td width="30" valign="middle" style="width:30px;padding-right:8px;vertical-align:middle;line-height:0;font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/7.png" width="30" height="30" alt="" style="display:block;width:30px;height:30px;border:0;">
-</td>
-<td valign="middle" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;font-weight:400;color:#ffffff;vertical-align:middle;">Strong<br>B2B Network</td>
-</tr>
-</table>
-</td>
-<td width="1" class="footer-vdiv" style="width:1px;background-color:#3d5a99;font-size:0;line-height:0;">&nbsp;</td>
-<td valign="middle" class="footer-trust-item" style="width:25%;padding:6px 4px;vertical-align:middle;">
-<table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin:0 auto;">
-<tr>
-<td width="30" valign="middle" style="width:30px;padding-right:8px;vertical-align:middle;line-height:0;font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/8.png" width="30" height="30" alt="" style="display:block;width:30px;height:30px;border:0;">
-</td>
-<td valign="middle" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;font-weight:400;color:#ffffff;vertical-align:middle;">Pan India<br>Delivery</td>
-</tr>
-</table>
-</td>
-<td width="1" class="footer-vdiv" style="width:1px;background-color:#3d5a99;font-size:0;line-height:0;">&nbsp;</td>
-<td valign="middle" class="footer-trust-item" style="width:25%;padding:6px 4px;vertical-align:middle;">
-<table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin:0 auto;">
-<tr>
-<td width="30" valign="middle" style="width:30px;padding-right:8px;vertical-align:middle;line-height:0;font-size:0;">
-<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/9.png" width="30" height="30" alt="" style="display:block;width:30px;height:30px;border:0;">
-</td>
-<td valign="middle" style="font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;font-weight:400;color:#ffffff;vertical-align:middle;">Dedicated<br>B2B Support</td>
-</tr>
-</table>
+<td align="center" style="padding:0;line-height:0;font-size:0;mso-line-height-rule:exactly;">
+<img src="https://keytpzeojnqdtaojmqik.supabase.co/storage/v1/object/public/Campaign/trust.png" width="580" height="387" alt="100% Genuine Products, Strong B2B Network, Pan India Delivery" class="footer-trust-img" style="display:block;width:100%;max-width:580px;height:auto;margin:0 auto;border:0;">
 </td>
 </tr>
 </table>
